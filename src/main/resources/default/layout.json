@@ -1,0 +1,7 @@
+{
+  "definitions": {
+      "css_url": ["/css/bootstrap.min.css","/css/app.css" ],
+      "js_url": ["/js/jquery-3.2.1.min.js","/js/popper.js","/js/bootstrap.js","/js/jquery.json-editor.min.js" ,
+        "/js/app.js","/js/smoke.min.js"]
+  }
+}

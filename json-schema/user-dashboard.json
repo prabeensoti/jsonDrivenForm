@@ -1,0 +1,41 @@
+{
+  "definitions": {
+    "page": {
+      "title": "User Dashboard",
+      "layout": "layout.json",
+      "snippet": "",
+      "elements": [
+        {
+          "$ref": "#/definitions/employeeAdd"
+        },
+        {
+          "$ref": "#/definitions/employeeList"
+        }
+      ]
+    },
+    "employeeAdd": {
+      "definitions": {
+        "type": "link",
+        "label": "Employee Add",
+        "href": "employee?type=create",
+        "value": "",
+        "gridindex": "2,1",
+        "jsvalidation": "",
+        "submittransform": "",
+        "class": "btn btn-primary btn-block"
+      }
+    },
+    "employeeList": {
+      "definitions": {
+        "type": "link",
+        "label": "Employee List",
+        "href": "employee?type=list",
+        "value": "",
+        "gridindex": "2,1",
+        "jsvalidation": "",
+        "submittransform": "",
+        "class": "btn btn-primary btn-block mt-2"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "definitions":{
+    "type":"form",
+    "method":"POST",
+    "action":"/save",
+    "jsmethod":"formSubmit()",
+    "class":"",
+    "id":"",
+    "fields":{
+       "name":{
+         "type":"text",
+         "label":"Full Name",
+         "placeholder":"Enter your name",
+         "value":"",
+         "gridindex":"1,1",
+         "jsvalidation":"",
+         "submittransform":"",
+         "icon":"",
+         "required":true,
+         "class": "",
+         "id": ""
+       },
+       "email":{
+        "type":"text",
+        "label":"Email",
+        "value":"",
+        "gridindex":"1,1",
+        "jsvalidation":"",
+        "submittransform":""
+      },
+      "create":{
+        "type":"submit",
+        "label":"Create",
+        "value":"",
+        "gridindex":"1,1",
+        "jsvalidation":"",
+        "submittransform":"",
+        "class":"btn btn-success submitButton"
+      }
+
+    }
+  }
+}

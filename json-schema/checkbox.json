@@ -1,0 +1,14 @@
+"level": {
+	"type": "checkbox",
+	"label": "Level 1",
+	"snippet": "div.form-group",
+	"value": "label1",
+	"checkvalue":true,
+	"gridindex": "1,1",
+	"jsvalidation": "",
+	"submittransform": "",
+	"icon": "",
+	"required": true,
+	"class": "form-check-input",
+	"id": ""
+}

@@ -1,0 +1,268 @@
+{
+  "definitions": {
+    "page": {
+      "title": "Employee Create Form",
+      "layout": "layout.json",
+      "snippet": "",
+      "elements": [
+        {
+          "$ref": "#/definitions/create"
+        },
+        {
+          "$ref": "#/definitions/list"
+        },
+        {
+          "$ref": "#/definitions/search"
+        }
+      ]
+    },
+    "list": {
+      "definitions": {
+        "type": "table",
+        "gridindex": "2",
+        "elements": {
+          "$ref": "#/definitions/addBtn",
+          "gridrowindex": "1,2",
+          "gridcolumnindex": "1,2"
+        }
+      }
+    },
+    "addBtn": {
+      "definitions": {
+        "type": "link",
+        "href": "/${uri}?type=create",
+        "value": "",
+        "gridindex": "1,1",
+        "jsvalidation": "",
+        "submittransform": "",
+        "class": "btn btn-primary btn-block"
+      }
+    },
+    "search": {
+      "definitions": {
+        "type": "form",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "snippet": "div.container>div.row.center-content>div.card.min-vw-70>div.card-body>h5.card-title.text-center[Employee Create],p.card-text",
+        "fields": {
+          "firstname": {
+            "type": "text",
+            "label": "First Name",
+            "placeholder": "Enter your first name",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "1,2"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "class": "form-control",
+            "id": ""
+          },
+          "lastname": {
+            "type": "text",
+            "label": "Last Name",
+            "placeholder": "Enter your last name",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "1,2"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "class": "form-control",
+            "id": ""
+          },
+          "search": {
+            "type": "submit",
+            "label": "Search",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "7,8"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "class": "btn btn-primary btn-block"
+          }
+        }
+      }
+    },
+    "create": {
+      "definitions": {
+        "type": "form",
+        "method": "POST",
+        "action": "/auth/process/save",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "snippet": "div.container>div.row.center-content>div.card.min-vw-70>div.card-body>h5.card-title.text-center[Employee Create],p.card-text",
+        "fields": {
+          "firstname": {
+            "type": "text",
+            "label": "First Name",
+            "placeholder": "Enter your first name",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "1,2"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "lastname": {
+            "type": "text",
+            "label": "Last Name",
+            "placeholder": "Enter your last name",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "1,2"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "address": {
+            "type": "text",
+            "label": "Address",
+            "placeholder": "Enter the address",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,12",
+              "row": "2,3"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "designation": {
+            "type": "text",
+            "label": "Designation",
+            "placeholder": "Enter your designation",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "3,4"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "salary": {
+            "type": "text",
+            "label": "Salary",
+            "placeholder": "Enter your salary",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "3,4"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "phone": {
+            "type": "text",
+            "label": "Phone number",
+            "placeholder": "Enter your phone number",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "4,5"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "gender": {
+            "type": "select",
+            "label": "Gender",
+            "snippet": "div.form-group",
+            "value": "M",
+            "list": {
+              "M": "Male",
+              "F": "Female",
+              "O": "Other"
+            },
+            "gridindex": {
+              "column": "7,12",
+              "row": "4,5"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "age": {
+            "type": "number",
+            "label": "Age",
+            "placeholder": "Enter your age",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,12",
+              "row": "5,6"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "icon": "",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "create": {
+            "type": "submit",
+            "label": "Create Employee",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "7,8"
+            },
+            "jsvalidation": "",
+            "submittransform": "",
+            "class": "btn btn-primary btn-block"
+          }
+        }
+      }
+    }
+  }
+}

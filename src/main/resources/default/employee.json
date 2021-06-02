@@ -1,0 +1,486 @@
+{
+  "definitions": {
+    "page": {
+      "title": "Employee Create Form",
+      "layout": "layout.json",
+      "snippet": "div.card.min-vw-90>div.card-body>h5.card-title.text-center[],p.card-text",
+      "elements": [
+        {
+          "$ref": "#/definitions/create"
+        },
+        {
+          "$ref": "#/definitions/update"
+        },
+        {
+          "$ref": "#/definitions/list"
+        },
+        {
+          "$ref": "#/definitions/search"
+        }
+      ]
+    },
+    "list": {
+      "definitions": {
+        "type": "table",
+        "gridindex": "2",
+        "elements": {
+          "$ref": "#/definitions/addBtn",
+          "gridrowindex": "1,2",
+          "gridcolumnindex": "1,2"
+        },
+        "fields": {
+          "firstname": {
+            "label": "First Name",
+            "class": ""
+          },
+          "lastname": {
+            "label": "Last Name",
+            "class": ""
+          },
+          "username": {
+            "label": "Username",
+            "class": ""
+          },
+          "address": {
+            "label": "Address",
+            "class": ""
+          },
+          "designation": {
+            "label": "Designation",
+            "class": ""
+          },
+          "salary": {
+            "label": "Salary",
+            "class": ""
+          },
+          "phone": {
+            "label": "Phone Number",
+            "class": ""
+          },
+          "gender": {
+            "label": "Gender",
+            "class": ""
+          },
+          "age": {
+            "label": "Age",
+            "class": ""
+          }
+        }
+      }
+    },
+    "addBtn": {
+      "definitions": {
+        "type": "link",
+        "href": "/${uri}?type=update",
+        "value": "",
+        "gridindex": "1,1",
+        "class": "btn btn-primary btn-block"
+      }
+    },
+    "search": {
+      "definitions": {
+        "type": "form",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "fields": {
+          "firstname": {
+            "type": "text",
+            "label": "First Name",
+            "placeholder": "Enter your first name",
+            "value": "",
+            "gridindex": {
+              "column": "1,4",
+              "row": "1,2"
+            },
+            "class": "form-control",
+            "id": ""
+          },
+          "lastname": {
+            "type": "text",
+            "label": "Last Name",
+            "placeholder": "Enter your last name",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "1,2"
+            },
+            "class": "form-control",
+            "id": ""
+          },
+          "username": {
+            "type": "text",
+            "label": "Username",
+            "placeholder": "Enter username",
+            "value": "",
+            "gridindex": {
+              "column": "9,12",
+              "row": "1,2"
+            },
+            "class": "form-control",
+            "id": ""
+          },
+          "salary": {
+            "type": "text",
+            "label": "Salary",
+            "placeholder": "Enter your salary",
+            "value": "",
+            "gridindex": {
+              "column": "1,4",
+              "row": "2,3"
+            },
+            "class": "form-control",
+            "id": ""
+          },
+          "age": {
+            "type": "number",
+            "label": "Age",
+            "placeholder": "Enter your age",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "2,3"
+            },
+            "class": "form-control",
+            "id": ""
+          },
+          "create": {
+            "type": "submit",
+            "label": "Search Employee",
+            "value": "",
+            "gridindex": {
+              "column": "9,12",
+              "row": "2,3"
+            },
+            "class": "btn btn-primary btn-block mt-4"
+          }
+        }
+      }
+    },
+    "create": {
+      "definitions": {
+        "type": "form",
+        "method": "POST",
+        "action": "/admin/process/save",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "snippet": "div.container>div.row.center-content>div.card.min-vw-70>div.card-body>h5.card-title.text-center[Employee Create],p.card-text",
+        "fields": {
+          "firstname": {
+            "type": "text",
+            "label": "First Name",
+            "placeholder": "Enter your first name",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "lastname": {
+            "type": "text",
+            "label": "Last Name",
+            "placeholder": "Enter your last name",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "username": {
+            "type": "text",
+            "label": "Username",
+            "placeholder": "Enter username",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "2,3"
+            },
+            "validation_regx": "^[0-9a-zA-Z_.-]+$",
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "password": {
+            "type": "password",
+            "label": "Password",
+            "placeholder": "Enter Password",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "2,3"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "address": {
+            "type": "text",
+            "label": "Address",
+            "placeholder": "Enter the address",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "3,4"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "designation": {
+            "type": "text",
+            "label": "Designation",
+            "placeholder": "Enter your designation",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "3,4"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "salary": {
+            "type": "text",
+            "label": "Salary",
+            "placeholder": "Enter your salary",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "4,5"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "phone": {
+            "type": "text",
+            "label": "Phone number",
+            "placeholder": "Enter your phone number",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "4,5"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "gender": {
+            "type": "select",
+            "label": "Gender",
+            "value": "Male",
+            "list": {
+              "Male": "Male",
+              "Female": "Female",
+              "Other": "Other"
+            },
+            "gridindex": {
+              "column": "1,6",
+              "row": "5,6"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "age": {
+            "type": "number",
+            "label": "Age",
+            "placeholder": "Enter your age",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "5,6"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "create": {
+            "type": "submit",
+            "label": "Create Employee",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "7,8"
+            },
+            "class": "btn btn-primary btn-block",
+            "id": ""
+          }
+        }
+      }
+    },
+    "update": {
+      "definitions": {
+        "type": "form",
+        "method": "POST",
+        "action": "/admin/process/update",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "snippet": "div.container>div.row.center-content>div.card.min-vw-70>div.card-body>h5.card-title.text-center[Employee Create],p.card-text",
+        "fields": {
+          "firstname": {
+            "type": "text",
+            "label": "First Name",
+            "placeholder": "Enter your first name",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "lastname": {
+            "type": "text",
+            "label": "Last Name",
+            "placeholder": "Enter your last name",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "username": {
+            "type": "text",
+            "label": "Username",
+            "placeholder": "Enter username",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "2,3"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "password": {
+            "type": "password",
+            "label": "Password",
+            "placeholder": "Enter Password",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "2,3"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "address": {
+            "type": "text",
+            "label": "Address",
+            "placeholder": "Enter the address",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "3,4"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "designation": {
+            "type": "text",
+            "label": "Designation",
+            "placeholder": "Enter your designation",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "3,4"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "salary": {
+            "type": "text",
+            "label": "Salary",
+            "placeholder": "Enter your salary",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "4,5"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "phone": {
+            "type": "text",
+            "label": "Phone number",
+            "placeholder": "Enter your phone number",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "4,5"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "gender": {
+            "type": "select",
+            "label": "Gender",
+            "value": "Male",
+            "list": {
+              "Male": "Male",
+              "Female": "Female",
+              "Other": "Other"
+            },
+            "gridindex": {
+              "column": "1,6",
+              "row": "5,6"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "age": {
+            "type": "number",
+            "label": "Age",
+            "placeholder": "Enter your age",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "5,6"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "create": {
+            "type": "submit",
+            "label": "Update Employee",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "7,8"
+            },
+            "class": "btn btn-primary btn-block"
+          }
+        }
+      }
+    }
+  }
+}

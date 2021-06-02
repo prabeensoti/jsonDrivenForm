@@ -1,0 +1,33 @@
+{
+  "definitions": {
+    "page": {
+      "title": "User Dashboard",
+      "layout": "layout.json",
+      "snippet": "div.row>div.card.min-vw-70>div.card-body>h5.card-title.text-center[],p.card-text",
+      "elements": [
+        {
+          "$ref": "#/definitions/employeeAdd"
+        },
+        {
+          "$ref": "#/definitions/employeeList"
+        }
+      ]
+    },
+    "employeeAdd": {
+      "definitions": {
+        "type": "link",
+        "label": "Employee Add",
+        "href": "employee?type=create",
+        "class": "btn btn-primary btn-block"
+      }
+    },
+    "employeeList": {
+      "definitions": {
+        "type": "link",
+        "label": "Employee List",
+        "href": "employee?type=list",
+        "class": "btn btn-primary btn-block mt-2"
+      }
+    }
+  }
+}

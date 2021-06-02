@@ -1,0 +1,67 @@
+{
+  "definitions": {
+    "page": {
+      "title": "Login",
+      "layout": "layout.json",
+      "snippet": "div.container>div.row.center-content>div.card.min-vw-70>div.card-body>h5.card-title.text-center[Login Page],p.card-text",
+      "elements": [
+        {
+          "$ref": "#/definitions/login-form"
+        }
+      ]
+    },
+    "login-form": {
+      "definitions": {
+        "type": "form",
+        "method": "POST",
+        "action": "/login",
+        "class": "",
+        "id": "",
+        "grid": {
+          "columnsize": "11",
+          "minrowheight": "10vh"
+        },
+        "fields": {
+          "username": {
+            "type": "text",
+            "label": "Username",
+            "placeholder": "Enter your username",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "1,6",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "password": {
+            "type": "password",
+            "label": "Password",
+            "placeholder": "Enter your password",
+            "snippet": "div.form-group",
+            "value": "",
+            "gridindex": {
+              "column": "7,12",
+              "row": "1,2"
+            },
+            "required": true,
+            "class": "form-control",
+            "id": ""
+          },
+          "create": {
+            "type": "submit",
+            "label": "Login",
+            "value": "",
+            "gridindex": {
+              "column": "5,8",
+              "row": "3,4"
+            },
+            "class": "btn btn-primary btn-block"
+          }
+        }
+      }
+    }
+  }
+}

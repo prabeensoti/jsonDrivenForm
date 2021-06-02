@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/JSONPage",
+  "definitions": {
+    "JSONPage": {
+      "type": "page",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "layout": {
+          "type": "string"
+        },
+        "snippet": {
+          "type": "string"
+        },
+        "grid": {
+          "type": "string"
+        },
+        "submit_method": {
+          "type": "string"
+        },
+        "js_method": {
+          "type": "string"
+        },
+        "additional_parameters": {
+          "$ref": "#/definitions/AdditionalParameters"
+        },
+        "fields": {
+          "$ref": "#/definitions/Fields"
+        }
+      },
+      "required": [
+        "title",
+        "layout"
+      ],
+      "title": "JSONPage"
+    },
+    "AdditionalParameters": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [ ]
+    },
+    "Fields": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "grid_index": {
+          "type": "string"
+        },
+        "js_validation": {
+          "type": "string"
+        },
+        "submit_transform": {
+          "type": "string"
+        },
+        "snippet": {
+          "type": "string"
+        }
+      },
+      "required": [ ]
+    }
+  }
+}

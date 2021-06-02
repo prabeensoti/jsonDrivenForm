@@ -1,0 +1,17 @@
+"gender": {
+"type": "select",
+"label": "Gender",
+"snippet": "div.form-group",
+"value": "F",
+"list": {
+"M": "Male",
+"F": "Female"
+},
+"gridindex": "1,1",
+"jsvalidation": "",
+"submittransform": "",
+"icon": "",
+"required": true,
+"class": "form-control",
+"id": ""
+}
